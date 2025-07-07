@@ -1,59 +1,13 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Neerchalians Unified Member Dashboard</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        overflow: hidden;
-        background: #000; /* optional */
-      }
-
-      iframe {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        border: none;
-        z-index: 1;
-      }
-    </style>
-  </head>
-  <body>
-    <iframe id="gsApp" src="https://script.google.com/macros/s/AKfycbwfR989OFZe2kBqbtRRM_uUQnVKMB6F2wcRLjfL8qjQb_eFMX5FvfCk0osOAwLzkIi-iQ/exec" allowfullscreen></iframe>
-
-    <script>
-      // Attempt to request fullscreen on load
-      window.onload = () => {
-        const iframe = document.getElementById('gsApp');
-        if (iframe?.requestFullscreen) {
-          iframe.requestFullscreen().catch(err => {
-            console.warn("Fullscreen failed:", err.message);
-          });
-        }
-
-        // Try to hide Google's banner every 200ms
-        const bannerKiller = setInterval(() => {
-          try {
-            const ifrDoc = iframe.contentDocument || iframe.contentWindow?.document;
-            if (!ifrDoc) return;
-
-            const banners = [...ifrDoc.querySelectorAll('div')]
-              .filter(el => el.textContent.includes('This application was created by a Google Apps Script user'));
-
-            if (banners.length) {
-              banners.forEach(el => el.style.display = 'none');
-              clearInterval(bannerKiller);
-            }
-          } catch (err) {
-            // Cross-origin policy may block access until fully loaded
-          }
-        }, 200);
-      };
-    </script>
-  </body>
+<head>
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Instant JS redirect
+    window.location.href = "https://script.google.com/macros/s/AKfycbwfR989OFZe2kBqbtRRM_uUQnVKMB6F2wcRLjfL8qjQb_eFMX5FvfCk0osOAwLzkIi-iQ/exec";
+  </script>
+</head>
+<body>
+</body>
 </html>
