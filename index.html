@@ -1,16 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Redirecting...</title>
+  <title>Neerchalians Unified Member Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    // Ensure top-level redirect (not inside iframe or sandbox)
-    window.onload = function () {
-      window.top.location.href = "https://script.google.com/macros/s/AKfycbwfR989OFZe2kBqbtRRM_uUQnVKMB6F2wcRLjfL8qjQb_eFMX5FvfCk0osOAwLzkIi-iQ/exec";
-    };
-  </script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #003366, #0066B3);
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 20vh;
+    }
+    .btn {
+      background: #ffffff;
+      color: #003366;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
+  <h1>Welcome to Neerchalians Dashboard</h1>
+  <p>Click below to open the app</p>
+  <button class="btn" onclick="openApp()">🚀 Launch App</button>
+
+  <script>
+    function openApp() {
+      // Must open in full window, not iframe or redirect
+      window.open("https://script.google.com/macros/s/AKfycbwfR989OFZe2kBqbtRRM_uUQnVKMB6F2wcRLjfL8qjQb_eFMX5FvfCk0osOAwLzkIi-iQ/exec", "_blank");
+    }
+  </script>
 </body>
 </html>
